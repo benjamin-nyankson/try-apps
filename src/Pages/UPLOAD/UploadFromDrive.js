@@ -26,7 +26,8 @@ function App() {
           console.log("User clicked cancel/close button");
         } else {
           const file = data.docs;
-          const imgId = file[0].id;
+          const my = file[0]
+          var imgId = my.id;
           const ImgUrl = process.env.REACT_APP_IMAGE_URL + imgId;
           // console.log(ImgUrl)
           // console.log(data);

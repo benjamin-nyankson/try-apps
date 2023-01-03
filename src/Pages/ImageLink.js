@@ -19,8 +19,12 @@ function Crop() {
     if (!link.match(imgReg)) {
       setError("Invalid image link");
       setImgURl(null);
-    } else {
+    } else if(link.match(imgReg)) {
       setImgURl(link);
+    }
+    else{
+      setError("No image found on the link you provided");
+      setImgURl(null);
     }
   };
 

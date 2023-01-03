@@ -1,7 +1,8 @@
+import { Button } from "@mui/material";
 import React from "react";
 import DropboxChooser from "react-dropbox-chooser";
 
-const APP_KEY = "bdbid41wswnl25r";
+// const APP_KEY = "awadfosd16y52au";
 function DropBox() {
   return (
     <div
@@ -15,7 +16,9 @@ function DropBox() {
       <h2 style={{ textAlign: "center" }}>Upload or choose from dropbox</h2>
 
       <div>
-        <DropboxChooser appKey={APP_KEY}></DropboxChooser>
+        <DropboxChooser appKey='awadfosd16y52au'>
+          <Button> Click to upload</Button>
+        </DropboxChooser>
       </div>
     </div>
   );

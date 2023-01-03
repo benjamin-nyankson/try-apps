@@ -9,7 +9,7 @@ function Dropzone() {
   const [file, setFile] = useState();
   const [image, setImage] = useState();
   const { getRootProps, getInputProps } = useDropzone({
-    accept: "image/*",
+    accept:{"image/*":[]},
     multiple: false,
     onDrop: (acceptedFiles) => {
       setFiles(
@@ -66,6 +66,7 @@ function Dropzone() {
           or drag and drop
         </p>
         <div>{images}</div>
+        <img src={image} alt="" />
       </div>
 
       {/* <img src={image} alt="preview" /> */}
