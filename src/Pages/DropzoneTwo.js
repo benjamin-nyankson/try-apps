@@ -2,16 +2,18 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import {
   baseStyle,
-  DropzonStyle,
+  // DropzonStyle,
   activeStyle,
   acceptStyle,
   rejectStyle,
   selectImageStyle,
+  imageStyle,
 } from "./style";
 
 function DropzoneComponent(props) {
   const [files, setFiles] = useState([]);
   const [imgFile, setImgFile] = useState();
+  const [imgLink, setImgLink] = useState();
 
   const onDrop = useCallback((acceptedFiles) => {
     setFiles(
@@ -22,6 +24,7 @@ function DropzoneComponent(props) {
       )
     );
     setImgFile(acceptedFiles);
+    setImgLink(acceptedFiles[0].preview);
   }, []);
 
   const {
@@ -32,13 +35,13 @@ function DropzoneComponent(props) {
     isDragReject,
   } = useDropzone({
     onDrop,
-    accept: "image/*",
+    accept: {"image/*":[]},
     multiple: false,
   });
 
   const style = useMemo(
     () => ({
-      ...selectImageStyle,
+      ...baseStyle,
       ...(isDragActive ? activeStyle : {}),
       ...(isDragAccept ? acceptStyle : {}),
       ...(isDragReject ? rejectStyle : {}),
@@ -46,11 +49,11 @@ function DropzoneComponent(props) {
     [isDragActive, isDragReject, isDragAccept]
   );
 
-  const thumbs = files.map((file) => (
-    <div key={file.name}>
-      <img src={file.preview} alt={file.name} width="500" height="500" />
-    </div>
-  ));
+  // const thumbs = files.map((file) => (
+  //   <div key={file.name}>
+  //     <img src={file.preview} alt={file.name} width="500" height="500" />
+  //   </div>
+  // ));
 
   // clean up
   useEffect(
@@ -61,18 +64,27 @@ function DropzoneComponent(props) {
   );
 
   const handleUpload = () => {
-    console.log(imgFile);
+    if (imgFile === undefined) {
+      alert("please select image");
+    } else {
+      setImgLink(imgFile[0].preview);
+    }
   };
   return (
-    <section>
-      <div {...getRootProps({ style })}>
-        <input {...getInputProps()} />
-        <div>Select Image or Drag and drop your image here.</div>
-        <aside>{thumbs}</aside>
-      </div>
-
+    <div style={selectImageStyle}>
+    <div {...getRootProps({ style })}>
+      <input {...getInputProps()} />
+      <div>Select Image or Drag and drop your image here.</div>
+      <br />
+      {imgLink && <img src={imgLink} alt="" style={imageStyle} />}
+      <p>{imgLink}</p>
+    </div>
+    {/* <aside> */}
+        {" "}
+        
+      {/* </aside> */}
       <button onClick={handleUpload}>UPLOAD</button>
-    </section>
+    </div>
   );
 }
 

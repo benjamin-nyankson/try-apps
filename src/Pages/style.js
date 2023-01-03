@@ -1,3 +1,4 @@
+
 export const Alerted = {
   backgroundColor: "#1F4EB4",
   padding: "10px",
@@ -128,12 +129,12 @@ export const baseStyle = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  padding: "20px",
+  // padding: "20px",
   borderWidth: 2,
   borderRadius: 2,
   borderColor: "#eeeeee",
-  borderStyle: "dashed",
-  backgroundColor: "#fafafa",
+  // borderStyle: "dashed",
+  // backgroundColor: "#fafafa",
   color: "#bdbdbd",
   transition: "border .3s ease-in-out",
 };
@@ -148,4 +149,9 @@ export const acceptStyle = {
 
 export const rejectStyle = {
   borderColor: "#ff1744",
+};
+
+export const imageStyle = {
+  width: "300px",
+  height: "350px",
 };
