@@ -20,14 +20,11 @@ import { Route, Routes } from "react-router-dom";
 // import ImageTest1 from "./Pages/ImageTest1";
 import FromDrive from "./Pages/UPLOAD/UploadFromDrive";
 import ImageLink from "./Pages/ImageLink";
-// import DropBox from "./Pages/DropBox";
-// import DropBox1 from "./Pages/Dropbox1";
 // import OneDrive from './Pages/OnedrivePicker'
 // import DropzoneComponent from "./Pages/DropzoneTwo";
 // import ImageCompressor from "./Pages/ImageCompressor";
 // import LoadingSinner from "./Pages/MUISkeleton";
 // import Login from "./Pages/Login";
-// import BoxDrop from "./Pages/BoxDrop";
 import UploadFile from "./Pages/UploadFile";
 import UploadImgFile from "./Pages/UploadImagePage";
 
@@ -35,11 +32,10 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element = {<ImageLink />} />
-        <Route path="/upload" element = {<UploadFile />} />
-        <Route path="/uploadImgFile" element = {<UploadImgFile />} />
+        <Route path="/" element={<ImageLink />} />
+        <Route path="/upload" element={<UploadFile />} />
+        <Route path="/uploadImgFile" element={<UploadImgFile />} />
       </Routes>
-      {/* <FromDrive /> */}
     </div>
   );
 }
