@@ -17,29 +17,13 @@ function ImageLink() {
     handleClose,
     severity,
   ] = UseImageURL();
-
   return (
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      {/* SnackBar here */}
-      {error && (
-        <Stack spacing={2} sx={{ width: "100%" }}>
-          <Snackbar
-            open={open}
-            autoHideDuration={6000}
-            onClose={handleClose}
-            anchorOrigin={{ vertical: "top", horizontal: "right" }}
-          >
-            <Alert
-              onClose={handleClose}
-              severity={severity}
-              // sx={{ width: "100%" }}
-            >
-              {error}
-            </Alert>
-          </Snackbar>
-        </Stack>
+      <br />
+      {imgURL && (
+        <img src={imgURL} alt="" style={{ width: "300px", height: "400px" }} />
       )}
       <OutlinedInput
         type="text"
@@ -54,6 +38,27 @@ function ImageLink() {
           </InputAdornment>
         }
       />
+
+      {/* SnackBar here */}
+      {error && (
+        <Stack spacing={2} sx={{ width: "100%" }}>
+          <Snackbar
+            open={open}
+            autoHideDuration={6000}
+            onClose={handleClose}
+            anchorOrigin={{ vertical: "top", horizontal: "right" }}
+          >
+            <Alert
+              onClose={handleClose}
+              severity={severity}
+              sx={{ width: "100%" }}
+              showProgress={true}
+            >
+              {error}
+            </Alert>
+          </Snackbar>
+        </Stack>
+      )}
     </div>
   );
 }
