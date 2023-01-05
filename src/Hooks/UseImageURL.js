@@ -20,7 +20,7 @@ function UseImageURL() {
     } else if (!link.match(imgReg)) {
       setOpen(true);
       setSeverity("error");
-      setError(`${link} is not a valid url`);
+      setError(`${link} is not a valid image url`);
       setOpen(true);
       setImgURl(null);
     } else if (link.match(imgReg)) {
