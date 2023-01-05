@@ -16,7 +16,7 @@ function UseImageURL() {
     if (link === null) {
       setOpen(true);
       setSeverity("error");
-      setError("Please enter image link");
+      setError("Please enter image url");
     } else if (!link.match(imgReg)) {
       setOpen(true);
       setSeverity("error");
