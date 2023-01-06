@@ -2,7 +2,7 @@ import React from "react";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import IconButton from "@mui/material/IconButton";
 import InputAdornment from "@mui/material/InputAdornment";
-import SendIcon from "@mui/icons-material/Send";
+import ImageSearchIcon from "@mui/icons-material/ImageSearch";
 import UseImageURL from "../Hooks/UseImageURL";
 import { Stack, Alert, Snackbar } from "@mui/material";
 
@@ -50,7 +50,7 @@ function ImageLink() {
         endAdornment={
           <InputAdornment position="end">
             <IconButton onClick={handleClick} edge="end">
-              <SendIcon />
+              <ImageSearchIcon />
             </IconButton>
           </InputAdornment>
         }
