@@ -16,7 +16,7 @@ function BackButton() {
           <ArrowBackIcon sx={BackArrowStyle} />
           <Typography variant="p" sx={BackButtonTextStyle}>
             {" "}
-            Back to login
+            Back
           </Typography>
         </Link>
       </div>
