@@ -49,7 +49,7 @@ function ImageLink() {
         placeholder="Enter image url"
         endAdornment={
           <InputAdornment position="end">
-            <IconButton onClick={handleClick} edge="end">
+            <IconButton onClick={handleClick} edge="end" style={{color:'blue'}}>
               <ImageSearchIcon />
             </IconButton>
           </InputAdornment>
