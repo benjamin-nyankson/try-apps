@@ -41,6 +41,7 @@ function ImageLink() {
           </Snackbar>
         </Stack>
       )}
+      {imgURL && <img src={imgURL} alt="" />}
       <OutlinedInput
         type="text"
         value={link}
