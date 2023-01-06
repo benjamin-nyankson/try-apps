@@ -1,7 +1,7 @@
 import { useState } from "react";
 function UseImageURL() {
   const [imgURL, setImgURl] = useState();
-  const [link, setLink] = useState(null);
+  const [link, setLink] = useState("");
   const [error, setError] = useState();
   const [open, setOpen] = useState(false);
   const [severity, setSeverity] = useState();
@@ -13,10 +13,11 @@ function UseImageURL() {
   };
 
   const handleClick = () => {
-    if (link === null) {
+    if (link === "") {
       setOpen(true);
       setSeverity("error");
       setError("Please enter image url");
+      setImgURl(null);
     } else if (!link.match(imgReg)) {
       setOpen(true);
       setSeverity("error");
