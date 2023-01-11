@@ -19,7 +19,7 @@ import { Route, Routes } from "react-router-dom";
 // import ImageTest from "./Pages/ImageTest";
 // import ImageTest1 from "./Pages/ImageTest1";
 import FromDrive from "./Pages/UPLOAD/UploadFromDrive";
-import ImageLink from "./Pages/ImageLink";
+import ImageLink from "./Pages/ImageLink3";
 // import OneDrive from './Pages/OnedrivePicker'
 // import DropzoneComponent from "./Pages/DropzoneTwo";
 // import ImageCompressor from "./Pages/ImageCompressor";
@@ -27,15 +27,19 @@ import ImageLink from "./Pages/ImageLink";
 // import Login from "./Pages/Login";
 import UploadFile from "./Pages/UploadFile";
 import UploadImgFile from "./Pages/UploadImagePage";
+// import Onedrive from './Pages/OneDrive'
+import DropBox from "./Pages/Dropbox";
 
 function App() {
   return (
     <div className="App">
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<ImageLink />} />
         <Route path="/upload" element={<UploadFile />} />
         <Route path="/uploadImgFile" element={<UploadImgFile />} />
-      </Routes>
+      </Routes> */}
+
+      <DropBox/>
     </div>
   );
 }
