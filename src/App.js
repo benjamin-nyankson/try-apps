@@ -19,7 +19,7 @@ import { Route, Routes } from "react-router-dom";
 // import ImageTest from "./Pages/ImageTest";
 // import ImageTest1 from "./Pages/ImageTest1";
 import FromDrive from "./Pages/UPLOAD/UploadFromDrive";
-import ImageLink from "./Pages/ImageLink3";
+import ImageLink from "./Pages/ImageLink";
 // import OneDrive from './Pages/OnedrivePicker'
 // import DropzoneComponent from "./Pages/DropzoneTwo";
 // import ImageCompressor from "./Pages/ImageCompressor";
@@ -39,7 +39,7 @@ function App() {
         <Route path="/uploadImgFile" element={<UploadImgFile />} />
       </Routes> */}
 
-      <DropBox/>
+      <ImageLink/>
     </div>
   );
 }
