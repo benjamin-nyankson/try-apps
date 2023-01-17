@@ -18,28 +18,30 @@ import "./index.css";
 import { Route, Routes } from "react-router-dom";
 // import ImageTest from "./Pages/ImageTest";
 // import ImageTest1 from "./Pages/ImageTest1";
-import FromDrive from "./Pages/UPLOAD/UploadFromDrive";
-import ImageLink from "./Pages/ImageLink";
+// import FromDrive from "./Pages/UPLOAD/UploadFromDrive";
+// import ImageLink from "./Pages/ImageLink";
 // import OneDrive from './Pages/OnedrivePicker'
 // import DropzoneComponent from "./Pages/DropzoneTwo";
 // import ImageCompressor from "./Pages/ImageCompressor";
 // import LoadingSinner from "./Pages/MUISkeleton";
 // import Login from "./Pages/Login";
-import UploadFile from "./Pages/UploadFile";
-import UploadImgFile from "./Pages/UploadImagePage";
+// import UploadFile from "./Pages/UploadFile";
+// import UploadImgFile from "./Pages/UploadImagePage";
 // import Onedrive from './Pages/OneDrive'
-import DropBox from "./Pages/Dropbox";
+// import DropBox from "./Pages/Dropbox";
+import Users from "./Pages/Users/Users";
+import Testing from "./Pages/Testing";
+import UpdateUser from "./Pages/Users/AddUser";
 
 function App() {
   return (
     <div className="App">
-      {/* <Routes>
-        <Route path="/" element={<ImageLink />} />
-        <Route path="/upload" element={<UploadFile />} />
-        <Route path="/uploadImgFile" element={<UploadImgFile />} />
-      </Routes> */}
+      <Routes>
+        <Route path="/" element={<UpdateUser />} />
+        <Route path="/users" element={<Users />} />
+      </Routes>
 
-      <ImageLink/>
+      {/* <UpdateUser /> */}
     </div>
   );
 }

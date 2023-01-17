@@ -1,50 +1,103 @@
 {
-    "users":[{
-        "fname": "Benjamin",
-        "lname": "Nyankson",
-        "tel": "+233 24 121 6747",
-        "text": "The LinearProgress uses a transition on the CSS transform property to provide a smooth update between different values. The default transition duration is 200ms. In the event a parent component updates the value prop too quickly, you will at least experience a 200ms delay between the re-render and the progress bar fully updated If you need to perform 30 re-renders per second or more, we recommend disabling the transition",
-        "id": 1
-      },
-      {
-        "fname": "Patience",
-        "lname": "Anokye",
-        "tel": "+233 55 58 99 600",
-        "text": "The LinearProgress uses a transition on the CSS transform property to provide a smooth update between different values. The default transition duration is 200ms. In the event a parent component updates the value prop too quickly, you will at least experience a 200ms delay between the re-render and the progress bar fully updated If you need to perform 30 re-renders per second or more, we recommend disabling the transition",
-        "id": 2
-      },
-      { "fname": "Jerry", "lname": "Nyankson", "tel": "+233 54 05 72 525", "id": 3 },
-      { "fname": "Abigail", "lname": "Nyankson", "tel": "+233 55 58 99 600", "id": 4 },
-      {
-        "fname": "Benjamin",
-        "lname": "Nyankson",
-        "tel": "+233 24 121 6747",
-        "text": "The LinearProgress uses a transition on the CSS transform property to provide a smooth update between different values. The default transition duration is 200ms. In the event a parent component updates the value prop too quickly, you will at least experience a 200ms delay between the re-render and the progress bar fully updated If you need to perform 30 re-renders per second or more, we recommend disabling the transition",
-        "id": 1
-      },
-      {
-       " fname": "Patience",
-        "lname": "Anokye",
-        "tel": "+233 55 58 99 600",
-        "text": "The LinearProgress uses a transition on the CSS transform property to provide a smooth update between different values. The default transition duration is 200ms. In the event a parent component updates the value prop too quickly, you will at least experience a 200ms delay between the re-render and the progress bar fully updated If you need to perform 30 re-renders per second or more, we recommend disabling the transition",
-        "id": 2
-      },
-      { "fname": "Jerry", "lname": "Nyankson", "tel": "+233 54 05 72 525", "id": 3 },
-      { "fname": "Abigail", "lname": "Nyankson", "tel": "+233 55 58 99 600", "id": 4 },
-      {
-        "fname": "Benjamin",
-        "lname": "Nyankson",
-        "tel": "+233 24 121 6747",
-        "text": "The LinearProgress uses a transition on the CSS transform property to provide a smooth update between different values. The default transition duration is 200ms. In the event a parent component updates the value prop too quickly, you will at least experience a 200ms delay between the re-render and the progress bar fully updated If you need to perform 30 re-renders per second or more, we recommend disabling the transition",
-        "id": 1
-      },
-      {
-        "fname": "Patience",
-        "lname": "Anokye",
-        "tel": "+233 55 58 99 600",
-        "text": "The LinearProgress uses a transition on the CSS transform property to provide a smooth update between different values. The default transition duration is 200ms. In the event a parent component updates the value prop too quickly, you will at least experience a 200ms delay between the re-render and the progress bar fully updated If you need to perform 30 re-renders per second or more, we recommend disabling the transition",
-        "id": 2
-      },
-      { "fname": "Jerry", "lname": "Nyankson", "tel": "+233 54 05 72 525", "id": 3 },
-      { "fname": "Abigail", "lname": "Nyankson", "tel": "+233 55 58 99 600", "id": 4 }]
+  "users": [
+    {
+      "fname": "Benjamins",
+      "lname": "Nyankson",
+      "tel": "+233 24 121 6747",
+      "text": "The LinearProgress uses a transition on the CSS transform property to provide a smooth update between different values. The default transition duration is 200ms. In the event a parent component updates the value prop too quickly, you will at least experience a 200ms delay between the re-render and the progress bar fully updated If you need to perform 30 re-renders per second or more, we recommend disabling the transition",
+      "id": 1
+    },
+    {
+      "fname": "Patience",
+      "lname": "Anokye",
+      "tel": "+233 55 58 99 600",
+      "text": "The LinearProgress uses a transition on the CSS transform property to provide a smooth update between different values. The default transition duration is 200ms. In the event a parent component updates the value prop too quickly, you will at least experience a 200ms delay between the re-render and the progress bar fully updated If you need to perform 30 re-renders per second or more, we recommend disabling the transition",
+      "id": 2
+    },
+    {
+      "fname": "Jerry",
+      "lname": "Nyankson",
+      "tel": "+233 54 05 72 525",
+      "id": 3
+    },
+    {
+      "fname": "Abigail",
+      "lname": "Nyankson",
+      "tel": "+233 55 58 99 600",
+      "id": 4
+    },
+    {
+      "fname": "Benjamin",
+      "lname": "Nyankson",
+      "tel": "+233 24 121 6747",
+      "text": "The LinearProgress uses a transition on the CSS transform property to provide a smooth update between different values. The default transition duration is 200ms. In the event a parent component updates the value prop too quickly, you will at least experience a 200ms delay between the re-render and the progress bar fully updated If you need to perform 30 re-renders per second or more, we recommend disabling the transition",
+      "id": 5
+    },
+    {
+      " fname": "Patience",
+      "lname": "Anokye",
+      "tel": "+233 55 58 99 600",
+      "text": "The LinearProgress uses a transition on the CSS transform property to provide a smooth update between different values. The default transition duration is 200ms. In the event a parent component updates the value prop too quickly, you will at least experience a 200ms delay between the re-render and the progress bar fully updated If you need to perform 30 re-renders per second or more, we recommend disabling the transition",
+      "id": 6
+    },
+    {
+      "fname": "Jerry",
+      "lname": "Nyankson",
+      "tel": "+233 54 05 72 525",
+      "id": 7
+    },
+    {
+      "fname": "Abigail",
+      "lname": "Nyankson",
+      "tel": "+233 55 58 99 600",
+      "id": 8
+    },
+    {
+      "fname": "Benjamin",
+      "lname": "Nyankson",
+      "tel": "+233 24 121 6747",
+      "text": "The LinearProgress uses a transition on the CSS transform property to provide a smooth update between different values. The default transition duration is 200ms. In the event a parent component updates the value prop too quickly, you will at least experience a 200ms delay between the re-render and the progress bar fully updated If you need to perform 30 re-renders per second or more, we recommend disabling the transition",
+      "id": 9
+    },
+    {
+      "fname": "Patience",
+      "lname": "Anokye",
+      "tel": "+233 55 58 99 600",
+      "text": "The LinearProgress uses a transition on the CSS transform property to provide a smooth update between different values. The default transition duration is 200ms. In the event a parent component updates the value prop too quickly, you will at least experience a 200ms delay between the re-render and the progress bar fully updated If you need to perform 30 re-renders per second or more, we recommend disabling the transition",
+      "id": 10
+    },
+    {
+      "fname": "Jerry",
+      "lname": "Nyankson",
+      "tel": "+233 54 05 72 525",
+      "id": 11
+    },
+    {
+      "fname": "Abigail",
+      "lname": "Nyankson",
+      "tel": "+233 55 58 99 600",
+      "id": 12
+    },
+    {
+      "fname": "Benjamin",
+      "lname": "Nyankson",
+      "tel": "012544",
+      "text": "I love coding",
+      "id": 13
+    },
+    {
+      "fname": "Benjamin",
+      "lname": "Nyankson",
+      "tel": "012544",
+      "text": "I love coding",
+      "id": 14
+    },
+    {
+      "fname": "Halima",
+      "lname": "Nyankson",
+      "tel": "0214544",
+      "text": "I like eating",
+      "id": 15
+    }
+  ]
 }
