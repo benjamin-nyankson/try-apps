@@ -1,5 +1,5 @@
 import React from 'react'
-import {UploadStyle} from '../style'
+import {UploadStyle} from '../../Styles/style'
 import { Link } from 'react-router-dom'
 
 function UploadSources() {

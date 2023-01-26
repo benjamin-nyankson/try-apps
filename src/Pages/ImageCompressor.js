@@ -10,15 +10,22 @@ function ImageCompressor() {
   const handleChange = (e) => {
     const imageFile = e.target.files[0]
     setImage(imageFile);
+    setImageFile(URL.createObjectURL(imageFile))
+    console.log(imageFile.name)
     
   };
+
+  const compress =()=>{
+    console.log(image.size)
+    console.log(URL.createObjectURL(imageFile))
+  }
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
       <div className="left" style={{ border: "1px solid blue", width: "40%" }}>
         <input type="file" accept="image/*" onChange={(e) => handleChange(e)} />
       </div>
       <div className="middle">
-        <Button>Compress</Button>
+        <Button onClick={compress} >Compress</Button>
         <Button>Donwnload</Button>
       </div>
       <div

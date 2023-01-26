@@ -23,7 +23,7 @@ function useDriveUpload() {
           const my = file[0];
           var imgId = my.id;
           const ImgUrl = process.env.REACT_APP_IMAGE_URL + imgId;
-          // console.log(ImgUrl)
+          console.log(ImgUrl)
           // console.log(data);
           // console.log(file);
           // console.log(ImgUrl);

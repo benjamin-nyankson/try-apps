@@ -7,7 +7,7 @@ import {
   BackArrowStyle,
   BackButtonTextStyle,
   BackButtonContainerStyle,
-} from "../Pages/style";
+} from "..//Styles/style";
 function BackButton() {
   return (
     <div style={BackButtonContainerStyle}>

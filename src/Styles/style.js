@@ -1,3 +1,5 @@
+import { color } from "@mui/system";
+
 export const Alerted = {
   backgroundColor: "#1F4EB4",
   padding: "10px",
@@ -151,8 +153,8 @@ export const rejectStyle = {
 };
 
 export const imageStyle = {
-  width: "300px",
-  height: "350px",
+  width: "100%",
+  height: "auto",
 };
 
 //backButton style
@@ -206,4 +208,29 @@ export const BackButtonTextStyle = {
   flex: "none",
   order: 1,
   flexGrow: 0,
+};
+
+export const UserStyleContainer = {
+  // display: "flex",
+  // flexDirection: "row",
+};
+
+export const UserStyle = {
+  backgroundColor: "white",
+  padding: "5px 30px",
+  marginTop: "20px",
+  margin: "20px auto",
+  borderRadius: "20px",
+  color: "gray",
+};
+
+export const NavbarStyle = {
+  backgroundColor: "#FF1493",
+  padding: "20px",
+  color: "white",
+  display: "flex",
+  justifyContent: "center",
+};
+export const LinkStyle = {
+  color: " white",
 };

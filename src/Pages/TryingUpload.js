@@ -11,7 +11,7 @@ import {
   cancelButton,
   confirmButton,
   DriveButton,
-} from "./style";
+} from "../Styles/style";
 
 export default function LabTabs() {
   const [files, setFiles] = useState([]);

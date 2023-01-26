@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-// import { useDropzone } from "react-dropzone";
 import useDropzone from "../Hooks/useDropzone";
 
 import {
@@ -15,28 +14,12 @@ function DropzoneComponent() {
     getRootProps,
     getInputProps,
     style,
-    handleUpload,
     imgLink,
-    compresLink,
     uploadSize,
     compresSize,
+    err,
   ] = useDropzone();
 
-  // const hanleComp = () => {
-  //   alert("Hey");
-  // };
-  // clean up
-  // useEffect(
-  //   () => () => {
-  //     files.forEach((file) => {
-  //       URL.revokeObjectURL(file.preview);
-  //       console.log(files);
-  //     });
-  //   },
-  //   [files]
-  // );
-
-  // useEffect(() => () => {});
   return (
     <div style={selectImageStyle}>
       <div {...getRootProps({ style })}>
@@ -44,14 +27,16 @@ function DropzoneComponent() {
         <div>Select Image or Drag and drop your image here.</div>
         <br />
         {imgLink && <img src={imgLink} alt="" style={imageStyle} />}
-        <p>{imgLink}</p>
-        <p>{uploadSize}</p>
+        {/* <p>{imgLink}</p> */}
+        {/* <p>{uploadSize}</p> */}
         <br />
-        <p>{uploadSize}</p>
+        {/* <p>{compresSize}</p> */}
+        <p>fjhfefh{err}</p>
       </div>
 
       {/* <button onClick={handleUpload}>UPLOAD</button> */}
-      {/* <img src={compresLink} alt="" /> */}
+      {/* <img src={orig} alt="" /> */}
+      <p>fjhfefh{err}</p>
     </div>
   );
 }

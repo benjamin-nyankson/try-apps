@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { API } from "../../services/API";
 import { useNavigate } from "react-router";
-import Users from "./Users";
+import UserNavbar from "../../Navbar/UserNavbar";
 export default function AddUser() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -40,6 +40,7 @@ export default function AddUser() {
   };
   return (
     <div>
+      <UserNavbar />
       <form action="">
         <input
           type="text"

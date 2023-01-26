@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDropzone } from "react-dropzone";
 // import ReactCrop from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
-import { selectImageStyle } from "../style";
+import { selectImageStyle } from "../../Styles/style";
 import UploadSources from "./UploadSources";
 
 function Dropzone() {
