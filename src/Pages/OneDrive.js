@@ -11,18 +11,18 @@ const OneDrivePicker = () => {
     <div>
       <button
         onClick={() => {
-          OneDrive.open({
-            clientId: "d70e2d72-748c-4562-8adb-f86d8990c2ab",
-            action: "download",
-            multiSelect: false,
-            success: handlePicker,
-            cancel: function () {
-              console.log("Cancelled");
-            },
-            error: function (error) {
-              console.log(error);
-            },
-          });
+          // OneDrive.open({
+          //   clientId: "d70e2d72-748c-4562-8adb-f86d8990c2ab",
+          //   action: "download",
+          //   multiSelect: false,
+          //   success: handlePicker,
+          //   cancel: function () {
+          //     console.log("Cancelled");
+          //   },
+          //   error: function (error) {
+          //     console.log(error);
+          //   },
+          // });
         }}
       >
         Pick a file from OneDrive

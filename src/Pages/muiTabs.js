@@ -18,7 +18,7 @@ import {
   confirmButton,
   TabLists,
   DriveButton,
-} from "./style";
+} from "../Styles/style";
 
 export default function LabTabs() {
   const [value, setValue] = React.useState("1");
@@ -56,7 +56,7 @@ export default function LabTabs() {
 
   // Dropzone
   const { getRootProps, getInputProps } = useDropzone({
-    accept: "image/*",
+    accept: { "image/*": [] },
     onDrop: (acceptedFiles) => {
       setFiles(
         acceptedFiles.map((file) =>

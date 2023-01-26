@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
-import { DropzonStyle } from "./style";
+import { DropzonStyle } from "../Styles/style";
 // import ReactCrop from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 

@@ -1,6 +1,6 @@
 // import { useState } from "react";
 // import useDrivePicker from "react-google-drive-picker";
-import { selectImageStyle, DriveButton } from "../style";
+import { selectImageStyle, DriveButton } from "../../Styles/style";
 import { Button } from "@mui/material";
 import UploadSources from "./UploadSources";
 // import AddToDriveIcon from "@mui/icons-material/AddToDrive";
