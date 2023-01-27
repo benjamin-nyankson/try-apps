@@ -8,7 +8,8 @@ import UploadSources from "./UploadSources";
 import "react-image-crop/dist/ReactCrop.css";
 import useDriveUpload from "../../Hooks/useDriveUpload";
 function App() {
-  const [handleOpenPicker, image, handleClear, handleSubmit] = useDriveUpload();
+  const [handleOpenPicker, image, handleClear, handleSubmit, handleCompress] =
+    useDriveUpload();
 
   return (
     <div>
@@ -28,7 +29,9 @@ function App() {
           <br />
           {image && <img src={image} alt="preview" />}
 
-          <Button type="submit">Send</Button>
+          <Button onClick={handleCompress}>
+            Compress
+          </Button>
         </form>
       </div>
     </div>

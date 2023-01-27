@@ -15,7 +15,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.2.2",
     "bootstrap": "^5.2.3",
-    "browser-image-compression": "^2.0.0",
+    "browser-image-compression": "^1.0.13",
     "compressorjs": "^1.1.1",
     "google": "^2.1.0",
     "json-server": "^0.17.1",
