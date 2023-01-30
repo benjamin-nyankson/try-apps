@@ -34,12 +34,18 @@ import Testing from "./Pages/Testing";
 import UpdateUser from "./Pages/Users/AddUser";
 import Layout from "./Layouts/Layout";
 import MyDropZone from "./Pages/MyDropZone";
+import Signin from "./Pages/Signin";
+import Drive from "./Drive";
+import Drive1 from "./Drive1";
+import Drive2 from "./Drive2";
+import GrayScaleImage from "./ImgGrayScale";
+import GrayScaleImage2 from "./ImgGrayScale2";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<UpdateUser />} />
+        <Route path="/" element={<GrayScaleImage2 />} />
         <Route path="/crop" element={<ReactCrop />} />
         <Route path="/imageCrop" element={<ImageCrop />} />
         <Route path="/MuiTabs" element={<MuiTabs />} />

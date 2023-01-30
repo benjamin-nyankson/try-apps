@@ -13,25 +13,28 @@ function UseImageURL() {
   };
 
   const handleClick = () => {
-    if (link === "") {
-      setOpen(true);
-      setSeverity("error");
-      setError("Please enter image url");
-      setImgURl(null);
-    } else if (!link.match(imgReg)) {
-      setOpen(true);
-      setSeverity("error");
-      setError(`${link} is not a valid image url`);
-      setOpen(true);
-      setImgURl(null);
-    } else if (link.match(imgReg)) {
-      setImgURl(link);
-    } else {
-      setOpen(true);
-      setSeverity("error");
-      setError("No image found on the link you provided");
-      setImgURl(null);
-    }
+    // if (link === "") {
+    //   setOpen(true);
+    //   setSeverity("error");
+    //   setError("Please enter image url");
+    //   setImgURl(null);
+    // } else if (!link.match(imgReg)) {
+    //   setOpen(true);
+    //   setSeverity("error");
+    //   setError(`${link} is not a valid image url`);
+    //   setOpen(true);
+    //   setImgURl(null);
+    // } else if (link.match(imgReg)) {
+    //   setImgURl(link);
+    //   alert("Okay");
+    const imgLink = new URL(link);
+    console.log(imgLink);
+    // } else {
+    //   setOpen(true);
+    //   setSeverity("error");
+    //   setError("No image found on the link you provided");
+    //   setImgURl(null);
+    // }
   };
 
   const handleClose = (reason) => {
