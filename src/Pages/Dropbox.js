@@ -1,6 +1,6 @@
 import { useState } from "react";
 import DropboxChooser from "react-dropbox-chooser";
-import useDropBox from '../Hooks/useDropBox'
+import useDropBox from "../Hooks/useDropBox";
 
 function DropBox() {
   const [imgLink, imgError, drop, handleSuccess] = useDropBox();

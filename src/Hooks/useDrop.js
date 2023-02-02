@@ -94,12 +94,13 @@ function DropzoneComponent() {
         imageCompression(ImageFile, options).then((output) => {
           const imageSize = (output.size / 1024 / 1024).toFixed(2);
           const compr = "compressed size: " + imageSize + " MB";
+          console.log(compr);
           if (imageSize > 1) {
             imageCompression(output, options).then((res) => {
               setError("");
               setImgLink(URL.createObjectURL(res));
-              // console.log(URL.createObjectURL(res));
-              //   console.log((res.size / 1024 / 1024).toFixed(2) + " MB");
+              console.log(URL.createObjectURL(res));
+              console.log((res.size / 1024 / 1024).toFixed(2) + " MB");
             });
           } else {
             //   console.log(compr);

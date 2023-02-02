@@ -1,12 +1,15 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Button } from "@mui/material";
 import Benji from "./assets/Benji.jpeg";
 import jwtDecode from "jwt-decode";
+import { Source } from "@mui/icons-material";
 const GrayScaleImage = () => {
   const [grayScale, setGrayScale] = useState(false);
   const imageRef = useRef(null);
   const [base, setBase] = useState();
-  const handleClick = () => {
+  const source =
+    "blob:http://localhost:3000/6f9936c4-1de6-4032-8888-ed1cc5e570ba";
+  setTimeout(() => {
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
 
@@ -28,12 +31,12 @@ const GrayScaleImage = () => {
     ctx.putImageData(imageData, 0, 0);
 
     imageRef.current.src = canvas.toDataURL();
-    // console.log(canvas.toDataURL());
+    console.log(canvas.toDataURL());
     const obj = canvas.toDataURL();
     setBase(canvas.toDataURL());
     console.log(obj);
     setGrayScale(true);
-  };
+  }, 1000);
 
   return (
     <div
@@ -46,7 +49,7 @@ const GrayScaleImage = () => {
     >
       <div style={{ display: "flex" }}>
         <img
-          src={Benji}
+          src={source}
           alt=""
           style={{ width: "200px", marginRight: "10px" }}
         />
@@ -54,7 +57,7 @@ const GrayScaleImage = () => {
         {!base ? (
           <img
             ref={imageRef}
-            src={Benji}
+            src={source}
             alt="Original Image"
             style={{ display: "none" }}
           />
@@ -65,11 +68,16 @@ const GrayScaleImage = () => {
 
       <br />
       <br />
-      <Button variant="contained" onClick={handleClick}>
+      {/* <Button variant="contained" onClick={handleClick}>
         Convert to Grayscale
-      </Button>
-      {grayScale && <p>Image is now in grayscale.</p>}
+      </Button> */}
+      {grayScale ? (
+        <p>Image is now in grayscale.</p>
+      ) : (
+        <p>Cannot convert to grayScale</p>
+      )}
       <div>{/* <img src={base} alt="" style={{ width: "200px" }} /> */}</div>
+      <p>{base}</p>
     </div>
   );
 };

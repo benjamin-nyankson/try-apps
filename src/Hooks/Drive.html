@@ -10,7 +10,6 @@
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
     <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
-    <img src="https://drive.google.com/file/d/13IC9Eo8fS59T_O7wMIUPjWnXFrwmcyDU/view?usp=share_link" alt="">
 
     <pre id="content" style="white-space: pre-wrap;"></pre>
 
@@ -29,7 +28,7 @@
 
       // Authorization scopes required by the API; multiple scopes can be
       // included, separated by spaces.
-      const SCOPES = 'https://www.googleapis.com/auth/drive';
+      const SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly';
 
       let tokenClient;
       let gapiInited = false;
@@ -114,6 +113,7 @@
           document.getElementById('content').innerText = '';
           document.getElementById('authorize_button').innerText = 'Authorize';
           document.getElementById('signout_button').style.visibility = 'hidden';
+          console.log(token)
         }
       }
 
@@ -138,10 +138,32 @@
         }
         // Flatten to string to display
         const output = files.reduce(
-            (str, file) => `${str}${file.name} (${file.id}\n`,
+            (str, file) => `${str}${file.name} (${file.id})\n`,
             'Files:\n');
         document.getElementById('content').innerText = output;
       }
+
+      function download(fileURL, fileName) {
+  const link = document.createElement("a");
+  link.href = fileURL;
+  link.download = fileName;
+  link.click();
+  const load =link.download = fileName;
+  console.log(load)
+ 
+}
+ const lnk = "https://drive.google.com/uc?export=view&id=1WS45ByTh_e8QNJTeFMGI8TYpE4OYS2U4"
+// //  https://drive.google.com/uc?export=view&id=1WS45ByTh_e8QNJTeFMGI8TYpE4OYS2U4
+// // download()
+// download(lnk);
+
+
+const imageURL =lnk // Send a request to the URL fetch(imageURL) 
+.then(response => response.blob()) 
+.then(blob => { // Convert the response to a Blob 
+    const objectURL = URL.createObjectURL(blob); // Store the Blob in local storage 
+    localStorage.setItem('image', objectURL); }); 
+    <img src="" alt="">
     </script>
     <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
     <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>

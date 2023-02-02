@@ -5,13 +5,16 @@ import JSZip from "jszip";
 import { useEffect } from "react";
 
 function useDriveUpload() {
-  const [openPicker] = useDrivePicker();
+  const [openPicker, data] = useDrivePicker();
   const [image, setImage] = useState(null);
   const [imgFile, setImgFile] = useState();
   const [id, setId] = useState();
   const [blobs, setBlob] = useState([]);
   const [links, setLinks] = useState();
   const [tokenClient, setTokenClient] = useState({});
+  const [fileId, setFile] = useState();
+  const [download, setDownload] = useState();
+
   const handleOpenPicker = () => {
     openPicker({
       clientId: process.env.REACT_APP_CLIENT_ID,
@@ -22,7 +25,21 @@ function useDriveUpload() {
       showUploadFolders: true,
       supportDrives: true,
       multiselect: true,
+
       callbackFunction: (data) => {
+        googleRef.current = window.google;
+        const google = googleRef.current;
+        setTimeout(() => {
+          setTokenClient(
+            google.accounts.oauth2.initTokenClient({
+              client_id: process.env.REACT_APP_LOGIN_CLIENT_ID,
+              scope: "https://www.googleapis.com/auth/drive",
+              callback: (tokenResponse) => {
+                console.log(tokenResponse.access_token);
+              },
+            })
+          );
+        }, 1000);
         const file = data.docs;
         if (data.action === "cancel") {
           console.log("User clicked cancel/close button");
@@ -40,7 +57,7 @@ function useDriveUpload() {
           // console.log(file);
           // console.log(ImgUrl);
           setImage(ImgUrl);
-
+          console.log(ImgUrl);
           async function downloadAndCompressFile(imgId) {
             // Use the Google Drive API to download the file
             // const file = await downloadFile(imgId);
@@ -50,6 +67,7 @@ function useDriveUpload() {
             const content = await zip.generateAsync({ type: "blob" });
 
             const fileId = imgId; // The ID of the file to be downloaded and compressed
+            setFile(imgId);
             const compressedFile = await downloadAndCompressFile(fileId);
             console.log(compressedFile);
           }
@@ -63,31 +81,41 @@ function useDriveUpload() {
     });
   };
 
+  useEffect(() => {
+    // do anything with the selected/uploaded files
+    if (data) {
+      //   data.docs.map((i) => console.log(i.name));
+      console.log(data.access_token);
+    }
+  }, [data]);
+
+  console.log(fileId);
+
   const googleRef = useRef(null);
   useEffect(() => {
     setTimeout(() => {
       googleRef.current = window.google;
       const google = googleRef.current;
-      console.log("google", google);
-      google.accounts.id.initialize({
-        client_id: process.env.REACT_APP_LOGIN_CLIENT_ID,
-        callback: handleCallbackResponse,
-      });
+      // console.log("google", google);
+      // google.accounts.id.initialize({
+      //   client_id: process.env.REACT_APP_LOGIN_CLIENT_ID,
+      //   callback: handleCallbackResponse,
+      // });
 
-      google.accounts.id.renderButton(document.getElementById("signInDiv"), {
-        theme: "outlines",
-        size: "large",
-      });
+      // google.accounts.id.renderButton(document.getElementById("signInDiv"), {
+      //   theme: "outlines",
+      //   size: "large",
+      // });
 
-      setTokenClient(
-        google.accounts.oauth2.initTokenClient({
-          client_id: process.env.REACT_APP_LOGIN_CLIENT_ID,
-          scope: "https://www.googleapis.com/auth/drive",
-          callback: (tokenResponse) => {
-            console.log(tokenResponse.access_token);
-          },
-        })
-      );
+      // setTokenClient(
+      //   google.accounts.oauth2.initTokenClient({
+      //     client_id: process.env.REACT_APP_LOGIN_CLIENT_ID,
+      //     scope: "https://www.googleapis.com/auth/drive",
+      //     callback: (tokenResponse) => {
+      //       console.log(tokenResponse.access_token);
+      //     },
+      //   })
+      // );
     }, 1000);
   }, []);
 
