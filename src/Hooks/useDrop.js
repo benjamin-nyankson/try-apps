@@ -82,12 +82,12 @@ function DropzoneComponent() {
     };
 
     if (ImageFile) {
-      if (fileSize >= 5) {
+      if (fileSize >= 25) {
         //   console.log("Image size should not be more than 5mb");
         setError("Image size should not be more than 5mb");
         setImgLink("");
       } else if (fileSize <= 1) {
-        //   console.log("Hurray! Image size is okay");
+        console.log("Hurray! Image size is okay");
         setImgLink(link);
         setError("");
       } else {
@@ -100,7 +100,10 @@ function DropzoneComponent() {
               setError("");
               setImgLink(URL.createObjectURL(res));
               console.log(URL.createObjectURL(res));
-              console.log((res.size / 1024 / 1024).toFixed(2) + " MB");
+              console.log(
+                "Compressed Again ",
+                (res.size / 1024 / 1024).toFixed(2) + " MB"
+              );
             });
           } else {
             //   console.log(compr);

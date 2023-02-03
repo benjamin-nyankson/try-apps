@@ -49,7 +49,7 @@ const GrayScaleImage = () => {
     >
       <div style={{ display: "flex" }}>
         <img
-          src={source}
+          src={Benji}
           alt=""
           style={{ width: "200px", marginRight: "10px" }}
         />
@@ -57,7 +57,7 @@ const GrayScaleImage = () => {
         {!base ? (
           <img
             ref={imageRef}
-            src={source}
+            src={Benji}
             alt="Original Image"
             style={{ display: "none" }}
           />
