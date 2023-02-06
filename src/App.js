@@ -39,7 +39,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<UpdateUser />} />
+        <Route path="/" element={<ImageLink />} />
         <Route path="/crop" element={<ReactCrop />} />
         <Route path="/imageCrop" element={<ImageCrop />} />
         <Route path="/MuiTabs" element={<MuiTabs />} />
