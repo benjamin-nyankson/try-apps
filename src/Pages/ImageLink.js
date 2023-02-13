@@ -32,6 +32,7 @@ function ImageLink() {
             anchorOrigin={{ vertical: "top", horizontal: "right" }}
           >
             <Alert
+              variant="filled"
               onClose={handleClose}
               severity={severity}
               // sx={{ width: "100%" }}

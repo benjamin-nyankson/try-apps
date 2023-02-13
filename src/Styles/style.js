@@ -153,7 +153,7 @@ export const rejectStyle = {
 };
 
 export const imageStyle = {
-  width: "100%",
+  width: "50%",
   height: "auto",
 };
 

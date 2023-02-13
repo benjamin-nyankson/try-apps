@@ -1,5 +1,6 @@
 import { linkClasses } from "@mui/material";
 import { useState } from "react";
+import axios from "axios";
 function UseImageURL() {
   const [imgURL, setImgURl] = useState();
   const [link, setLink] = useState("");
@@ -70,26 +71,50 @@ function UseImageURL() {
     //       );
     //     });
     // }
+    // else {
+    //   // fetch(`https://cors-anywhere.herokuapp.com/${link}`, {
+    //   //   method: "GET",
+    //   //   headers: {},
+    //   // })
+    //   //   .then((response) => {
+    //   //     console.log(response);
+    //   //     response.arrayBuffer().then(function (buffer) {
+    //   //       const url = window.URL.createObjectURL(new Blob([buffer]));
+    //   //       const link = document.createElement("a");
+    //   //       link.href = url;
+    //   //       link.setAttribute("download", "image.png"); //or any other extension
+    //   //       document.body.appendChild(link);
+    //   //       setImgURl(link);
+    //   //       link.click();
+    //   //     });
+    //   //   })
+    //   //   .catch((err) => {
+    //   //     console.warn(err);
+    //   //   });
+    //   axios
+    //     .get(link)
+    //     .then((response) => {
+    //       console.log(response);
+    //     })
+    //     .catch((error) => {
+    //       console.log(error);
+    //     });
+    // }
     else {
-      fetch(link, {
-        method: "GET",
-        headers: {},
-      })
-        .then((response) => {
-          console.log(response);
-          response.arrayBuffer().then(function (buffer) {
-            const url = window.URL.createObjectURL(new Blob([buffer]));
-            const link = document.createElement("a");
-            link.href = url;
-            link.setAttribute("download", "image.png"); //or any other extension
-            document.body.appendChild(link);
-            setImgURl(link);
-            link.click();
-          });
+      fetch(link)
+        .then((response) => response.blob())
+        .then((blob) => {
+          // setFetching(false);
+          const blobURL = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = blobURL;
+          a.style = "display: none";
+
+          // if (name && name.length) a.download = name;
+          document.body.appendChild(a);
+          a.click();
         })
-        .catch((err) => {
-          console.warn(err);
-        });
+        .catch(() => setError(true));
     }
   };
 

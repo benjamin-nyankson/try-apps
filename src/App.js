@@ -34,12 +34,15 @@ import Testing from "./Pages/Testing";
 import UpdateUser from "./Pages/Users/AddUser";
 import Layout from "./Layouts/Layout";
 import MyDropZone from "./Pages/MyDropZone";
+import Download from "./Pages/Download";
+import GrayScale from "./Pages/GrayScale";
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<ImageLink />} />
+        <Route path="/download" element={<Download />} />
         <Route path="/crop" element={<ReactCrop />} />
         <Route path="/imageCrop" element={<ImageCrop />} />
         <Route path="/MuiTabs" element={<MuiTabs />} />
@@ -48,6 +51,7 @@ function App() {
         <Route path="/compress" element={<ImageCompressor />} />
         {/* <Route path="/drop" element={<DropzoneComponent />} /> */}
         {/* <Route path="/drop" element={<Dropzone2Component />} /> */}
+        <Route path="/gray" element={<GrayScale />} />
         <Route path="/drop" element={<MyDropZone />} />
         <Route path="/drive" element={<FromDrive />} />
       </Routes>

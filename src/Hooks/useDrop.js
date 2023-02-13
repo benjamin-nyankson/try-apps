@@ -15,13 +15,8 @@ function DropzoneComponent() {
   const [imgFile, setImgFile] = useState();
   const [size, setSize] = useState();
   const [link, setLink] = useState();
-  //   const [me, setMe] = useState({
-  //     name: "Benjamin",
-  //     id: 1,
-  //   });
-  const [error, setError] = useState();
 
-  // const [orig, setOrig] = useState();
+  const [error, setError] = useState();
 
   const onDrop = useCallback((acceptedFiles) => {
     // console.log("Hell", acceptedFiles);
@@ -83,14 +78,15 @@ function DropzoneComponent() {
 
     if (ImageFile) {
       if (fileSize >= 5) {
-        //   console.log("Image size should not be more than 5mb");
+        console.log("Image size should not be more than 5mb");
         setError("Image size should not be more than 5mb");
         setImgLink("");
       } else if (fileSize <= 1) {
-        //   console.log("Hurray! Image size is okay");
+        console.log("Hurray! Image size is okay");
         setImgLink(link);
         setError("");
       } else {
+        console.log("Original", ImageFile);
         imageCompression(ImageFile, options).then((output) => {
           const imageSize = (output.size / 1024 / 1024).toFixed(2);
           const compr = "compressed size: " + imageSize + " MB";
@@ -98,20 +94,28 @@ function DropzoneComponent() {
             imageCompression(output, options).then((res) => {
               setError("");
               setImgLink(URL.createObjectURL(res));
-              // console.log(URL.createObjectURL(res));
-              //   console.log((res.size / 1024 / 1024).toFixed(2) + " MB");
+              console.log(URL.createObjectURL(res));
+              const compSize = res.size / 1024 / 1024;
+              const newFile = res;
+              console.log("Res", res);
+              console.log(compSize.toFixed(2) + " MB");
+
+              if (compSize > 1) {
+                console.log("Compress me");
+                console.log("MMmm", newFile);
+              }
             });
           } else {
             //   console.log(compr);
             const compressedLink = URL.createObjectURL(output);
             setImgLink(compressedLink);
             setError("");
-            //   console.log("Image compressed successfully");
+            console.log("Image compressed successfully");
           }
         });
       }
     }
-  });
+  }, []);
 
   return [getRootProps, getInputProps, style, imgLink, error];
 }
