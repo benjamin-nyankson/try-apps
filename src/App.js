@@ -36,6 +36,7 @@ import Layout from "./Layouts/Layout";
 import MyDropZone from "./Pages/MyDropZone";
 import Download from "./Pages/Download";
 import GrayScale from "./Pages/GrayScale";
+import ReactOtp from "./components/ReactOtp";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
         <Route path="/gray" element={<GrayScale />} />
         <Route path="/drop" element={<MyDropZone />} />
         <Route path="/drive" element={<FromDrive />} />
+        <Route path="/otp" element={<ReactOtp />} />
       </Routes>
     </div>
   );
