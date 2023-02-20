@@ -37,7 +37,8 @@ import MyDropZone from "./Pages/MyDropZone";
 import Download from "./Pages/Download";
 import GrayScale from "./Pages/GrayScale";
 import ReactOtp from "./components/ReactOtp";
-
+import Paginate from "./components/Pagination/Paginate";
+import LoadingPage from "./LoadingButton/LoadingPage";
 function App() {
   return (
     <div className="App">
@@ -56,6 +57,8 @@ function App() {
         <Route path="/drop" element={<MyDropZone />} />
         <Route path="/drive" element={<FromDrive />} />
         <Route path="/otp" element={<ReactOtp />} />
+        <Route path="/paginate" element={<Paginate />} />
+        <Route path="/load" element={<LoadingPage />} />
       </Routes>
     </div>
   );

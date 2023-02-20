@@ -5,14 +5,18 @@ function useReactOTP() {
   const otpInputRef = useRef();
   const [otpVal, setOtpVal] = useState("");
   const [disable, setDisable] = useState(true);
-
+  const [hasErrored, setHasErrored] = useState(false);
   const placeholders = ["0", "0", "0", "0"];
 
   function handleOTPChange(value) {
     if (isNaN(value)) {
       setDisable(true);
+      setHasErrored(true);
     } else if (value.length >= 4) {
       setDisable(false);
+      setHasErrored(false);
+    } else if (value.length === 0) {
+      setHasErrored(false);
     } else {
       setDisable(true);
     }
@@ -31,7 +35,7 @@ function useReactOTP() {
         inputValue.slice(0, cursorPosition - 1) +
         inputValue.slice(cursorPosition);
       //   setOTP(newValue);
-      console.log(newValue);
+      // console.log(newValue);
     }
   }
 
@@ -65,6 +69,7 @@ function useReactOTP() {
     otp,
     otpInputRef,
     placeholders,
+    hasErrored,
   ];
 }
 

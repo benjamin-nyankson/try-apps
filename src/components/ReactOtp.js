@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import OTPInput from "react-otp-input";
 import { Button } from "@mui/material";
 import useReactOTP from "../Hooks/useReactOTP";
+import { DataGrid } from "@mui/x-data-grid";
 function ReactOtp() {
   const [
     handleOTPChange,
@@ -13,6 +14,7 @@ function ReactOtp() {
     otp,
     otpInputRef,
     placeholders,
+    hasErrored,
   ] = useReactOTP();
 
   //   const placeholders = ["0", "0", "0", "0"];
@@ -29,9 +31,26 @@ function ReactOtp() {
         }}
       >
         <br />
+        
         <br />
         {otpVal}
         <br />
+
+        <OTPInput
+          numInputs={4}
+          placeholder={["1", "2", "3", "4"]}
+          value={otp}
+          inputStyle={{
+            width: "50px",
+            border: "2px solid #ccc",
+            height: "50px",
+            borderRadius: "8px",
+            margin: "0 10px",
+            textAlign: "center",
+            fontSize: "20px",
+          }}
+        />
+
         <br />
         <OTPInput
           ref={otpInputRef}
@@ -42,8 +61,10 @@ function ReactOtp() {
           isInputRequired
           onKeyDown={handleKeyDown}
           onPaste={handlePaste}
-          separator={<span>-</span>}
-          placeholder={["1", "2", "4", "5"]}
+          separator={<span style={{fontWeight:'bolder', fontSize:'20px'}}>-</span>}
+          placeholder={4}
+
+          hasErrored={hasErrored}
           containerStyle={{ display: "flex", justifyContent: "center" }}
           inputStyle={{
             width: "50px",
@@ -54,6 +75,7 @@ function ReactOtp() {
             textAlign: "center",
             fontSize: "20px",
           }}
+          errorStyle={{ border: "2px solid red" }}
           focusStyle={{ border: "2px solid #007bff", outline: "none" }}
         />
 
