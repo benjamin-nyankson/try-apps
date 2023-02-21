@@ -48,14 +48,14 @@ a{
 @keyframes moveCheck {
   from {
     /* height: 0px; */
-    /* opacity: 0; */
-    width: 0px;
+    opacity: 0;
+    /* width: 0px; */
   }
 
   to{
     /* height: 200px; */
-    /* opacity: 1; */
-    width: 200px;
+    opacity: 1;
+    /* width: 200px; */
 
   }
   
