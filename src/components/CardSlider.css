@@ -1,0 +1,48 @@
+.card-slider {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.card-slider-inner {
+  display: flex;
+  transition: transform 0.5s ease-out;
+}
+
+.card {
+  flex: 1 0 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.swipe-left,
+.swipe-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.swipe-left {
+  left: 1rem;
+}
+
+.swipe-right {
+  right: 1rem;
+}
+
+.card image:hover {
+  width: 200px;
+}
