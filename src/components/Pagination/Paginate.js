@@ -43,6 +43,8 @@ function Paginate() {
         page={currentPage}
         onChange={handlePageChange}
         onClick={handleClick}
+        boundaryCount={3}
+        siblingCount={0}
       />
     </div>
   );

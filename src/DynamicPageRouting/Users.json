@@ -1,0 +1,44 @@
+{
+    "Users":[
+        {
+            "id":1,
+            "fname":"Benjamin",
+            "lname":"Nyankson",
+            "contact":"0241216747",
+            "email":"nyanksonbenjamin4#gmail.com",
+            "homeTown":"Ekumfi Immuna"
+        },
+        {
+            "id":2,
+            "fname":"Jerry",
+            "lname":"Nyankson",
+            "contact":"0241216747",
+            "email":"nyanksonbenjamin4#gmail.com",
+            "homeTown":"Ekumfi Immuna"
+        },
+        {
+            "id":3,
+            "fname":"Patience",
+            "lname":"Nyankson",
+            "contact":"0241216747",
+            "email":"nyanksonbenjamin4#gmail.com",
+            "homeTown":"Ekumfi Immuna"
+        },
+        {
+            "id":4,
+            "fname":"Abigail",
+            "lname":"Nyankson",
+            "contact":"0241216747",
+            "email":"nyanksonbenjamin4#gmail.com",
+            "homeTown":"Ekumfi Immuna"
+        },
+        {
+            "id":5,
+            "fname":"Agnes",
+            "lname":"Nyankson",
+            "contact":"0241216747",
+            "email":"nyanksonbenjamin4#gmail.com",
+            "homeTown":"Ekumfi Immuna"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+  "Cart": [
+    {
+      "item": "iPhone X",
+      "img_link": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+      "quantity": 1,
+      "unitPrice": 737.7194,
+      "totalPrice": 737.72,
+      "id": 1
+    }
+  ]
+}

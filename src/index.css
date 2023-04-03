@@ -1,7 +1,7 @@
-body{
+body {
   margin: 0;
 }
-.all{
+.all {
   background-color: rgb(30, 0, 255);
   /* width: 500px; */
   margin: 100px auto;
@@ -11,7 +11,7 @@ body{
   justify-content: space-between;
 }
 
-form input[type = 'number']{
+form input[type="number"] {
   width: 50px;
   height: 50px;
   margin-top: 10px;
@@ -22,16 +22,15 @@ form input[type = 'number']{
   /* border: 1px solid red; */
 }
 
-.otpContainer{
+.otpContainer {
   display: flex;
 }
 
-
-.alert{
-  background-color:'#1F4EB4'
+.alert {
+  background-color: "#1F4EB4";
 }
 
-a{
+a {
   text-decoration: none;
   /* border: 1px solid blue; */
   /* padding: 10px; */
@@ -41,7 +40,7 @@ a{
   /* margin: 5px; */
 }
 
-.check{
+.check {
   animation: moveCheck 1s ease-in-out;
 }
 
@@ -52,11 +51,14 @@ a{
     /* width: 0px; */
   }
 
-  to{
+  to {
     /* height: 200px; */
     opacity: 1;
     /* width: 200px; */
-
   }
-  
+}
+
+p:hover {
+  transform: translate(1.5);
+  /* background-color: red; */
 }

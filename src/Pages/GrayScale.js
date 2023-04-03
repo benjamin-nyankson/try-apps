@@ -66,6 +66,8 @@ function GrayScale() {
 
       setBase(canvas.toDataURL());
     };
+
+    console.log(base);
   });
   return (
     <div style={selectImageStyle}>
@@ -83,6 +85,8 @@ function GrayScale() {
       >
         {imgLink && <img src={imgLink} alt="" style={imageStyle} />}
         {imgBlob && <img src={imgBlob} alt="" style={imageStyle} />}
+
+        <img src={base} alt="" />
       </div>
       <p>{error}</p>
     </div>
